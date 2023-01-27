@@ -1,0 +1,15 @@
+$bg-color: rgb(52, 60, 64);
+$basic-font-color: rgb(179, 192, 178);
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-title);
+  color: $basic-font-color;
+
+  width: 99w;
+  overflow-x: hidden;
+  background-color: $bg-color;
+}

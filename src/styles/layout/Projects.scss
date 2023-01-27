@@ -1,0 +1,49 @@
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+
+$bg-color: rgb(52, 60, 64);
+$basic-font-color: rgb(179, 192, 178);
+$highlight-font-color: rgb(85, 229, 72);
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.projects {
+    position: relative;
+    
+    &::after {
+        content: "Projects";
+        position: absolute;
+        top: 7.5%;
+        transform: translate(-50%, -50%);
+
+        @include phones{
+            top: 7%;
+        }
+
+        @include tablets{
+            top: 5.78%;
+        }
+
+        @include desktops{
+            top: 6%;
+        }
+    }
+}

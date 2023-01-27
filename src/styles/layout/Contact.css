@@ -1,0 +1,28 @@
+.contact {
+  margin-bottom: 5rem;
+}
+.contact::after {
+  position: absolute;
+  content: "Contact";
+  top: 5%;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact::after {
+    top: 3.35%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .contact::after {
+    top: 3.2%;
+  }
+}
+@media (min-width: 1010px) and (max-width: 1280px) {
+  .contact::after {
+    top: 4.5%;
+  }
+}
+@media (min-width: 1280px) {
+  .contact::after {
+    top: 4.5%;
+  }
+}/*# sourceMappingURL=Contact.css.map */

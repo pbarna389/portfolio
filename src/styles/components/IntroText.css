@@ -1,0 +1,56 @@
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .text-wrapper {
+    max-width: 20rem;
+    margin-left: 0rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1280px) {
+  .text-wrapper {
+    max-width: 15rem;
+  }
+}
+@media (min-width: 1280px) {
+  .text-wrapper {
+    max-width: 28rem;
+  }
+}
+.text-wrapper h1 {
+  font-size: 3rem;
+  color: rgb(179, 192, 178);
+  font-weight: 200;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .text-wrapper h1 {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1280px) {
+  .text-wrapper h1 {
+    font-size: 2.55rem;
+  }
+}
+.text-wrapper h1 span {
+  color: transparent;
+  font-size: 5.1rem;
+  -webkit-text-stroke: 1.5px rgb(85, 229, 72);
+}
+.text-wrapper .sub-text {
+  margin-top: 0.4rem;
+  color: rgb(179, 192, 178);
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .text-wrapper .sub-text {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1280px) {
+  .text-wrapper .sub-text {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=IntroText.css.map */

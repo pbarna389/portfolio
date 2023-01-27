@@ -1,0 +1,82 @@
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+
+$basic-font-color: rgb(179, 192, 178);
+$highlight-font-color: rgb(85, 229, 72);
+$bg-color: rgb(52, 60, 64);
+
+
+$h1-fontSize: 3rem;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include phones {
+        max-width: 20rem;
+        margin-left: 0rem;
+    }
+
+    @include tablets {
+        max-width: 15rem;
+    }
+
+    @include desktops {
+        max-width: 28rem;
+    }
+
+    h1 {
+        font-size: $h1-fontSize;
+        color: $basic-font-color;
+        font-weight: 200;
+    
+        @include phones {
+            font-size: $h1-fontSize * 0.7;
+        }
+    
+        @include tablets {
+            font-size: $h1-fontSize * 0.85;
+        }
+    
+        span {
+            color: transparent;
+            font-size: $h1-fontSize * 1.7;
+            -webkit-text-stroke: 1.5px $highlight-font-color;
+        }
+    };
+
+    .sub-text {
+        margin-top: 0.4rem;
+        color: $basic-font-color;
+        @include phones {
+            font-size: 0.8rem;
+        }
+
+        @include tablets {
+            font-size: 0.9rem;
+        }
+    }
+    
+}

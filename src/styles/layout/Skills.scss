@@ -1,0 +1,63 @@
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+$basic-font-color: rgb(179, 192, 178);
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.skills {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 99vw;
+        height: 10vh;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        backdrop-filter: blur(3px);
+        z-index: 1;
+    }
+
+    &::after {
+        content: "Skills";
+        position: absolute;
+        left: 50%;
+        z-index: 2;
+        color: $basic-font-color;
+        transform: translate(-50%, -50%);
+
+        @include phones {
+            font-size: 1.1rem;
+            top: 10%;
+        }
+
+        @include tablets {
+            font-size: 1.2rem;
+            top: 8%;
+        }
+
+        @include desktops {
+            font-size: 1.5rem;
+            top: 7%;
+        }
+    }
+}

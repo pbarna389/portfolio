@@ -1,0 +1,76 @@
+$helper-color: rgb(52, 60, 64);
+
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
+.parallax {
+    position: relative;
+    height: 10vh;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 10rem auto;
+
+    @include phones{
+
+    }
+
+    .helper {
+        background-color: transparent;
+        position: absolute;
+        z-index: 2;
+
+        &.arrow-top-left {
+            top: 0;
+            left: 0;
+            border-bottom: 2.1rem solid transparent;
+            border-left: 2.1rem solid $helper-color;
+            border-top: 0 solid transparent;
+        }
+
+        &.arrow-bottom-left {
+            bottom: 0;
+            left: 0;
+            border-top: 2.1rem solid transparent;
+            border-left: 2.1rem solid $helper-color;
+            border-bottom: 0 solid transparent;  
+        }
+
+        &.arrow-top-right {
+            top: 0;
+            right: 0;
+            border-bottom: 2.1rem solid transparent;
+            border-right: 2.1rem solid $helper-color;
+            border-top: 0 solid transparent;
+        }
+
+        &.arrow-bottom-right {
+            bottom: 0;
+            right: 0;
+            border-top: 2.1rem solid transparent;
+            border-right: 2.1rem solid $helper-color;
+            border-bottom: 0 solid transparent;            
+        }
+    };
+    
+}

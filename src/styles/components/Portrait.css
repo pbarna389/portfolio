@@ -1,0 +1,25 @@
+.portrait {
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: black;
+  margin-top: 1rem;
+  border: 2px solid black;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .portrait {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1280px) {
+  .portrait {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .portrait {
+    width: 13rem;
+    height: 13rem;
+  }
+}/*# sourceMappingURL=Portrait.css.map */

@@ -1,0 +1,60 @@
+$basic-font-color: rgb(179, 192, 178);
+$highlight-font-color: rgb(85, 229, 72);
+$bg-shadow-color: rgb(82, 93, 98);
+$bg-color: rgb(107, 124, 132);
+
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.project-card-wrapper {
+    width: fit-content;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s linear;
+
+    @include phones {
+        width: 0.5rem;
+    }
+
+    &:hover {
+        h4{
+            color: $highlight-font-color;
+            text-shadow: 5px 5px 0 $bg-shadow-color;
+        }
+    }
+
+    h4 {
+        text-align: center;
+        color: $basic-font-color;
+        height: 2rem;
+        margin-bottom: 1rem;
+        text-shadow: 3px 3px 0 $bg-shadow-color;
+        transition: all 0.3s linear;
+    };
+}

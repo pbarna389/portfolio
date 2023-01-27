@@ -1,0 +1,67 @@
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 768px;
+$tablet-contact-width-max: 1010px;
+$desktop-width: 1280px;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin phonesButton {
+    @media (min-width: #{$phone-width}) and (max-width: #{$phone-button}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tabletContact {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-contact-width-max}) {
+        @content;
+    }
+}
+
+@mixin betweenTabletsandDesks {
+    @media (min-width: #{$tablet-contact-width-max}) and (max-width: #{$desktop-width}) {
+        @content;
+    }  
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.contact {
+    margin-bottom: 5rem;
+
+    &::after {
+        position: absolute;
+        content: "Contact";
+        top: 5%;
+
+        @include phones {
+            top: 3.35%;
+        }
+
+        @include tablets {
+            top: 3.2%;
+        }
+
+        @include betweenTabletsandDesks {
+            top: 4.5%;
+        }
+
+        @include desktops {
+            top: 4.5%;
+        }
+    }
+}

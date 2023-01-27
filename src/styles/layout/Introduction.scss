@@ -1,0 +1,71 @@
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .intro-wrapper {
+        display: flex;
+        margin: 0 1rem;
+        margin-top: 5rem;
+        justify-content: center;
+        align-items: center;
+        
+        @include phones {
+            flex-direction: column;
+        }
+        
+        @include tablets {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+
+        @include desktops {
+            flex-direction: row;
+            gap: 5rem;
+        }
+
+        h1 {
+            @include phones {
+                max-width: 20rem;
+                margin-left: 0rem;
+            }
+
+            @include tablets {
+                max-width: 15rem;
+            }
+
+            @include desktops {
+                max-width: 28rem;
+            }
+        }
+    }
+
+    .portrait-wrapper {
+        position: relative;
+    }
+}

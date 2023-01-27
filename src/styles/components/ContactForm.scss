@@ -1,0 +1,130 @@
+$desk-width: 20rem;
+$desk-padding: 0.5rem;
+$bg-shadow-color: rgb(82, 93, 98);
+
+$desk-font-size: 1.5rem;
+
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 768px;
+$tablet-contact-width-max: 1010px;
+$desktop-width: 1280px;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin phonesButton {
+    @media (min-width: #{$phone-width}) and (max-width: #{$phone-button}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tabletContact {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-contact-width-max}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+
+    @include phones {
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+
+    @include tablets {
+        gap: 5rem;
+    }
+
+    @include tabletContact{
+        flex-direction: column-reverse;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include phones {
+            width: $phone-width;
+        }
+
+        input {
+            width: $desk-width;
+            height: 1.5rem;
+            padding: $desk-padding;
+
+            @include phones {
+                width: $phone-width;
+            }
+        }
+
+        textarea {
+            resize: none;
+            width: $desk-width;
+            height: 10rem;
+            padding: $desk-padding;
+            margin-bottom: 1rem;
+        }
+
+        input, textarea {
+            @include phones {
+                width: $phone-width * 0.8;
+            }
+        }
+
+        .contact-btn {
+            margin-top: 1rem;
+            width: $desk-width + 2rem;
+
+            @include phones {
+                width: $phone-width;
+            }
+
+            &:hover {
+                &:disabled {
+                    box-shadow: 5px 5px 0 $bg-shadow-color;
+                    color: inherit;
+                }
+            }
+
+            &:disabled {
+                background-color: grey;
+            }
+        }
+    }
+
+    .contact-text {
+        width: $desk-width;
+        font-size: $desk-font-size;
+
+        @include phones {
+            font-size: $desk-font-size * 0.6;
+            width: $phone-width;
+        }
+
+        @include tablets {
+            font-size: $desk-font-size * 0.8;
+        }
+    };
+};

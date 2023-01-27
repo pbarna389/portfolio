@@ -1,0 +1,86 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column-reverse;
+    gap: 5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .contact-wrapper {
+    gap: 5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1010px) {
+  .contact-wrapper {
+    flex-direction: column-reverse;
+  }
+}
+.contact-wrapper form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact-wrapper form {
+    width: 320px;
+  }
+}
+.contact-wrapper form input {
+  width: 20rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact-wrapper form input {
+    width: 320px;
+  }
+}
+.contact-wrapper form textarea {
+  resize: none;
+  width: 20rem;
+  height: 10rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact-wrapper form input, .contact-wrapper form textarea {
+    width: 256px;
+  }
+}
+.contact-wrapper form .contact-btn {
+  margin-top: 1rem;
+  width: 22rem;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact-wrapper form .contact-btn {
+    width: 320px;
+  }
+}
+.contact-wrapper form .contact-btn:hover:disabled {
+  box-shadow: 5px 5px 0 rgb(82, 93, 98);
+  color: inherit;
+}
+.contact-wrapper form .contact-btn:disabled {
+  background-color: grey;
+}
+.contact-wrapper .contact-text {
+  width: 20rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .contact-wrapper .contact-text {
+    font-size: 0.9rem;
+    width: 320px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .contact-wrapper .contact-text {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=ContactForm.css.map */

@@ -1,0 +1,131 @@
+* {
+  color: rgb(179, 192, 178);
+}
+
+.modal-wrapper .modal {
+  position: fixed;
+  top: 8%;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  opacity: 0;
+  background-color: rgb(52, 60, 64);
+  width: 30rem;
+  height: 28rem;
+  z-index: 6;
+  border: 2px solid black;
+  transition: opacity 0.5s linear;
+  overflow: hidden;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .modal-wrapper .modal {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.modal-wrapper .modal .gallery {
+  display: flex;
+  gap: 1rem;
+  opacity: 1;
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  transition: opacity 0.1s linear;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .modal-wrapper .modal .gallery {
+    width: 100vw;
+    gap: 2rem;
+  }
+}
+.modal-wrapper .modal .gallery.fadein {
+  opacity: 1;
+}
+.modal-wrapper .modal .gallery.fadeOut {
+  opacity: 0;
+}
+.modal-wrapper .modal .gallery .btn-wrapper button {
+  position: absolute;
+}
+.modal-wrapper .modal .gallery .btn-wrapper button.btn-next {
+  top: 0;
+  right: 0;
+}
+.modal-wrapper .modal .gallery .btn-wrapper button.btn-prev {
+  top: 0;
+  left: 0;
+}
+.modal-wrapper .modal .gallery img {
+  transition: none;
+  width: inherit;
+  height: inherit;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .modal-wrapper .modal .gallery img {
+    min-width: 100%;
+    max-height: 100%;
+  }
+}
+.modal-wrapper .modal .gallery img:hover {
+  scale: none;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .modal-wrapper .modal p {
+    font-size: 0.7rem;
+    width: 320px;
+  }
+}
+.modal-wrapper .modal h2, .modal-wrapper .modal h3, .modal-wrapper .modal p {
+  margin-bottom: 1rem;
+}
+.modal-wrapper .modal h3 {
+  align-self: flex-start;
+}
+.modal-wrapper .modal.shown {
+  opacity: 1;
+}
+.modal-wrapper .modal.fadeout {
+  opacity: 0;
+}
+.modal-wrapper::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 1;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  transform: opacity 0.5s linear;
+}
+.modal-wrapper .closeModal {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  background: none;
+  width: 50px;
+  height: 50px;
+  z-index: 7;
+  border: none;
+  transition: color 0.3s linear;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .modal-wrapper .closeModal {
+    align-self: center;
+  }
+}
+.modal-wrapper .closeModal:hover {
+  color: rgb(85, 229, 72);
+}/*# sourceMappingURL=Modal.css.map */

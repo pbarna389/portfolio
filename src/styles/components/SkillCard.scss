@@ -1,0 +1,67 @@
+$phone-width: 320px;
+$phone-button: 362px;
+$tablet-width: 640px;
+$desktop-width: 1280px;
+
+@mixin phones {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+.skill {
+    position: relative;
+    margin: 0 auto;
+
+    @include phones {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    @include tablets {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    @include desktops {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+img {
+    transition: all 0.3s linear;
+
+    &:hover {
+        scale: 1.2;
+    }
+
+    @include phones {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    @include tablets {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    @include desktops {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+}
+

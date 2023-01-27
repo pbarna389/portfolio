@@ -1,0 +1,20 @@
+* {
+  --font-text: "Audiowide", cursive;
+  --font-title: 'Orbitron', sans-serif;
+}
+
+@font-face {
+    font-family: "Revamped";
+    src: local("Revamped"),url("./assets//Fonts/Revamped-X3q1a.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+};
+
+h2, h1 {
+  font-family: var(--font-title);
+}
+
+
