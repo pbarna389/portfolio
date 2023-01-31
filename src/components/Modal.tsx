@@ -48,7 +48,7 @@ const Modal:React.FC = () => {
 
     setGalleryFadeOut(true);
     
-    const id = setTimeout(() => {
+    const id = window.setTimeout(() => {
 
       if (arrow === "left") {
         console.log("rotation - prev");
@@ -72,7 +72,7 @@ const Modal:React.FC = () => {
   };
 
   const setClearGalleryAnim = () => {
-    const id = setTimeout(() => {
+    const id = window.setTimeout(() => {
       setGalleryFadeIn(null);
       setGalleryFadeOut(null)
       setArrowClicked(null);
@@ -88,7 +88,7 @@ const Modal:React.FC = () => {
   };
 
   const handleAnimFadein = () => {
-    const id = setTimeout(() => {
+    const id = window.setTimeout(() => {
       setFadeIn(true);
     }, 50);
     setFadeInTimeoutID(id);
@@ -104,7 +104,7 @@ const Modal:React.FC = () => {
   
   const handleAnimFadeout = () => {
     setFadeout(true);
-    const id = setTimeout(() => {
+    const id = window.setTimeout(() => {
 
       setModalState(!modalState);
       setSelectedProject(null);
