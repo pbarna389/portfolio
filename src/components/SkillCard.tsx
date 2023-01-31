@@ -2,7 +2,7 @@ import { ReactComponent as Css3 } from "../assets/SVG/CSS3.svg";
 import { ReactComponent as Html5 } from "../assets/SVG/HTML5.svg";
 import { ReactComponent as Js} from "../assets/SVG/JS.svg";
 import { ReactComponent as React } from "../assets/SVG/React.svg";
-import { ReactComponent as Sass } from "../assets/SVG/sass.svg";
+import { ReactComponent as Sass } from "../assets/SVG/Sass.svg";
 import { ReactComponent as Ts} from "../assets/SVG/TS.svg";
 
 import "../styles/components/SkillCard.css"
