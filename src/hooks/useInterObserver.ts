@@ -6,9 +6,11 @@ export const useInterObserver = (state:boolean, setState: React.Dispatch<React.S
 
     const callbackFunction = (entries:any) => {
         const [ entry ] = entries;
-        setState(entry.isIntersecting);
-        setShown(true);
-        console.log(entry)
+        if (entry.isIntersecting) {
+            setState(entry.isIntersecting);
+            setShown(true);
+            console.log(entry)
+        } else return;
     };
 
     useEffect(() => {
