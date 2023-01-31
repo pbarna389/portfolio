@@ -31,27 +31,29 @@
     width: 320px;
   }
 }
-.contact-wrapper form input {
+.contact-wrapper form input, .contact-wrapper form textarea {
   width: 20rem;
-  height: 1.5rem;
   padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: all 0.3s linear;
 }
-@media (min-width: 320px) and (max-width: 640px) {
-  .contact-wrapper form input {
-    width: 320px;
-  }
-}
-.contact-wrapper form textarea {
-  resize: none;
-  width: 20rem;
-  height: 10rem;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+.contact-wrapper form input:focus, .contact-wrapper form textarea:focus {
+  border: 3px solid black;
+  font-size: 1.2rem;
 }
 @media (min-width: 320px) and (max-width: 640px) {
   .contact-wrapper form input, .contact-wrapper form textarea {
     width: 256px;
   }
+}
+.contact-wrapper form input {
+  height: 1.5rem;
+}
+.contact-wrapper form textarea {
+  resize: none;
+  height: 10rem;
+  margin-bottom: 1rem;
 }
 .contact-wrapper form .contact-btn {
   margin-top: 1rem;

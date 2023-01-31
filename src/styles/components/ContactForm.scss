@@ -69,28 +69,31 @@ $desktop-width: 1280px;
             width: $phone-width;
         }
 
-        input {
+        input, textarea {
             width: $desk-width;
-            height: 1.5rem;
             padding: $desk-padding;
+            border: 1px solid black;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            
+            &:focus {
+                border: 3px solid black;
+                font-size: 1.2rem;
+            }
 
             @include phones {
-                width: $phone-width;
+                width: $phone-width * 0.8;
             }
+        }
+
+        input {
+            height: 1.5rem;
         }
 
         textarea {
             resize: none;
-            width: $desk-width;
             height: 10rem;
-            padding: $desk-padding;
             margin-bottom: 1rem;
-        }
-
-        input, textarea {
-            @include phones {
-                width: $phone-width * 0.8;
-            }
         }
 
         .contact-btn {
