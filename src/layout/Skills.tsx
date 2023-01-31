@@ -7,9 +7,15 @@ import { useInterObserver } from "../hooks/useInterObserver";
 import "../styles/layout/Skills.css";
 
 const Skills = () => {
-  const skills = ["HTML5", "CSS3", "JS", "React", "SASS", "TS"];
+    const skills = ["HTML5", "CSS3", "JS", "React", "SASS", "TS"];
+    
+    const options = {
+      threshold: 0.2
+    }
+
     const [visibility, setVisibility] = useState<boolean>(false);
-    const [ elementRef ] = useInterObserver(visibility, setVisibility);
+    const [ elementRef ] = useInterObserver(visibility, setVisibility, options);
+
 
   return (
     <section ref={elementRef} id="Skills" className={`section skills ${visibility ? "show" : ""}`}>

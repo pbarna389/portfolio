@@ -6,8 +6,11 @@ import ContactForm from '../components/ContactForm';
 import "../styles/layout/Contact.css"
 
 const Contact = () => {
+    const options = {
+        threshold: 0.2
+    }
     const [visibility, setVisibility] = useState<boolean>(false);
-    const [ elementRef ] = useInterObserver(visibility, setVisibility);
+    const [ elementRef ] = useInterObserver(visibility, setVisibility, options);
 
     return (
         <section ref={elementRef} id="Contact" className={`section contact ${visibility ? "show" : ""}`}>

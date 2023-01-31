@@ -8,6 +8,10 @@ const Main:React.FC = ():JSX.Element => {
     const [visibility, setVisibility] = useState<boolean>(false);
     const [ elementRef ] = useInterObserver(visibility, setVisibility);
 
+    const options = {
+        
+    }
+
     return (
             <section ref={elementRef && elementRef} id="intro" className={`section introduction ${visibility ? "show" : ""}`}>
                 <div className="intro-wrapper">

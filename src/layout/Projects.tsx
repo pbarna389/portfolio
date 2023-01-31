@@ -15,8 +15,12 @@ const Projects:React.FC = () => {
         modalStates:[modalState, setModalState],
     } = useContext(ProjectContext) as IProjectContext;
 
+    const options = {
+        threshold: 0.2
+    }
+
     const [visibility, setVisibility] = useState<boolean>(false);
-    const [ elementRef ] = useInterObserver(visibility, setVisibility);
+    const [ elementRef ] = useInterObserver(visibility, setVisibility, options);
 
     return (
         <section ref={elementRef} id="Projects" className={`section projects ${visibility ? "show" : ""}`}>
