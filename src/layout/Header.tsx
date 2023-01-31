@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import '../styles/layout/Header.css'
 
 const Navbar:React.FC = ():JSX.Element => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     return (
         <header>

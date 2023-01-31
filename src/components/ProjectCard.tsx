@@ -5,9 +5,10 @@ import "../styles/components/ProjectCard.css";
 
 interface ProjectCardProps {
     name: string,
+    finished: boolean,
 }
 
-const ProjectCard:React.FC<ProjectCardProps> = ({ name }) => {
+const ProjectCard:React.FC<ProjectCardProps> = ({ name, finished }) => {
     const {
         projects,
         modalStates:[modalState, setModalState],
@@ -23,7 +24,7 @@ const ProjectCard:React.FC<ProjectCardProps> = ({ name }) => {
     return (
             <div className="project-card">
                 <h4>{name}</h4>
-                <button className="btn" onClick={() => handleClick()}>Details</button>
+                <button className="btn" disabled={!finished} onClick={() => handleClick()}>Details</button>
             </div>
     )
 }

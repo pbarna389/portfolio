@@ -37,14 +37,21 @@
 }
 @media (min-width: 640px) and (max-width: 1280px) {
   .introduction .intro-wrapper h1 {
-    max-width: 15rem;
+    max-width: 25rem;
+    align-self: flex-start;
   }
 }
 @media (min-width: 1280px) {
   .introduction .intro-wrapper h1 {
     max-width: 28rem;
+    align-self: flex-start;
   }
 }
 .introduction .portrait-wrapper {
   position: relative;
+}
+@media (min-width: 640px) and (max-width: 1280px) {
+  .introduction .portrait-wrapper {
+    align-self: center;
+  }
 }/*# sourceMappingURL=Introduction.css.map */

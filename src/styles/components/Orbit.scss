@@ -98,23 +98,25 @@ $highlight-font-color: rgb(85, 229, 72);
         transform: rotateZ(360deg) rotateY(25deg) rotateX(-75deg);
 
     }
-    15% {
+    21% {
         width: $orbit-width * 0.5;
         height: $orbit-width * 0.5;
         opacity: 0;
-        transform: rotateZ(306deg) rotateY(25deg) rotateX(-75deg);
+        transform: rotateZ(285deg) rotateY(25deg) rotateX(-75deg);
     }
 
-    55% {
+    60% {
         width: $orbit-width * 1.25;
         height: $orbit-width * 1.25;
         opacity: 1;
-        transform: rotateZ(162deg) rotateY(25deg) rotateX(-75deg);
+        transform: rotateZ(144deg) rotateY(25deg) rotateX(-75deg);
     }
 
-    80% {
+    85% {
+        width: $orbit-width * 0.75;
+        height: $orbit-width * 0.75;
         opacity: 1;
-        transform: rotateZ(54deg) rotateY(25deg) rotateX(-75deg);
+        transform: rotateZ(36deg) rotateY(25deg) rotateX(-75deg);
     }
 
     97% {

@@ -43,25 +43,4 @@ $desktop-width: 1280px;
 .contact {
     margin-bottom: 5rem;
 
-    &::after {
-        position: absolute;
-        content: "Contact";
-        top: 5%;
-
-        @include phones {
-            top: 3.35%;
-        }
-
-        @include tablets {
-            top: 3.2%;
-        }
-
-        @include betweenTabletsandDesks {
-            top: 4.5%;
-        }
-
-        @include desktops {
-            top: 4.5%;
-        }
-    }
 }

@@ -1,10 +1,9 @@
-
-import css3 from "../assets/SVG/CSS3.svg";
-import html5 from "../assets/SVG/HTML5.svg";
-import js from "../assets/SVG/JS.svg";
-import react from "../assets/SVG/React.svg";
-import sass from "../assets/SVG/sass.svg";
-import ts from "../assets/SVG/TS.svg";
+import { ReactComponent as Css3 } from "../assets/SVG/CSS3.svg";
+import { ReactComponent as Html5 } from "../assets/SVG/HTML5.svg";
+import { ReactComponent as Js} from "../assets/SVG/JS.svg";
+import { ReactComponent as React } from "../assets/SVG/React.svg";
+import { ReactComponent as Sass } from "../assets/SVG/sass.svg";
+import { ReactComponent as Ts} from "../assets/SVG/TS.svg";
 
 import "../styles/components/SkillCard.css"
 
@@ -13,18 +12,17 @@ interface SkillCardProps {
 };
 
 const SkillCard:React.FC<SkillCardProps> = ({ skill }) => {
-  const imgSrcValue = () => {
-    return skill.toLowerCase() === "html5" ? html5 
-          : skill.toLowerCase() === "css3" ? css3 
-          : skill.toLowerCase() === "js" ? js 
-          : skill.toLowerCase() === "react" ? react 
-          : skill.toLowerCase() === "sass" ? sass 
-          : ts; 
-  }
 
   return (
     <div className="skill">
-      <img src={imgSrcValue()} alt={skill} />
+      {
+        skill.toLowerCase() === "html5" ? <Html5 className="skill" /> 
+          : skill.toLowerCase() === "css3" ? <Css3 className="skill" />
+          : skill.toLowerCase() === "js" ? <Js className="skill" /> 
+          : skill.toLowerCase() === "react" ? <React className="skill" /> 
+          : skill.toLowerCase() === "sass" ? <Sass className="skill" /> 
+          : <Ts className="skill"/>
+      }
     
     </div>
   )

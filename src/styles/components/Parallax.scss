@@ -4,6 +4,8 @@ $phone-width: 320px;
 $phone-button: 362px;
 $tablet-width: 640px;
 $desktop-width: 1280px;
+$basic-font-color: rgb(179, 192, 178);
+$highlight-font-color: rgb(85, 229, 72);
 
 @mixin phones {
     @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
@@ -25,20 +27,78 @@ $desktop-width: 1280px;
 
 
 .parallax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     height: 10vh;
     background-size: cover;
     background-attachment: fixed;
     margin: 10rem auto;
+    transition: filter 0.3s linear;
+    overflow: hidden;
 
-    @include phones{
+
+    &:hover {
+        filter: none;
+
+        .section-name {
+            color: $highlight-font-color;
+        }
+
+        &::before, &::after {
+            backdrop-filter: none;
+        }
 
     }
 
-    .helper {
-        background-color: transparent;
-        position: absolute;
+    .section-name {
         z-index: 2;
+        color: lightgrey;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2rem;
+        text-indent: 2rem;
+        user-select: none;
+        transition: color 0.3s linear;
+
+        @include phones {
+            font-size: 1.1rem;
+        }
+
+        @include tablets {
+            font-size: 1.2rem;
+        }
+
+        @include desktops {
+            font-size: 3rem;
+        }
+    }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        transition: all 0.3s linear;
+
+    }
+
+    &::before {
+        backdrop-filter: blur(2px);
+    }
+
+    &::after {
+        backdrop-filter: grayscale(100%);
+    }
+
+    .helper {
+        background-color: none;
+        position: absolute;
+        z-index: 1;
 
         &.arrow-top-left {
             top: 0;

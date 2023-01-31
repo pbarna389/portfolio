@@ -19,13 +19,11 @@
 }
 .project-card:hover h4 {
   color: rgb(85, 229, 72);
-  text-shadow: 5px 5px 0 rgb(82, 93, 98);
 }
 .project-card h4 {
   text-align: center;
   color: rgb(179, 192, 178);
   height: 2rem;
   margin-bottom: 1rem;
-  text-shadow: 3px 3px 0 rgb(82, 93, 98);
   transition: all 0.3s linear;
 }/*# sourceMappingURL=ProjectCard.css.map */

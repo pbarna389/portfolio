@@ -24,44 +24,26 @@ $desktop-width: 1280px;
 .skill {
     position: relative;
     margin: 0 auto;
-
-    @include phones {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    @include tablets {
-        width: 5rem;
-        height: 5rem;
-    }
-
-    @include desktops {
-        width: 7rem;
-        height: 7rem;
-    }
-}
-
-img {
     transition: all 0.3s linear;
 
+
     &:hover {
-        scale: 1.2;
+        scale: 1.1;
     }
 
     @include phones {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4rem;
+        height: 4rem;
     }
 
     @include tablets {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
     }
 
     @include desktops {
-        width: 7rem;
-        height: 7rem;
+        width: 10rem;
+        height: 10rem;
     }
-    
 }
 

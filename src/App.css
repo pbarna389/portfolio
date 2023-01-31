@@ -47,18 +47,6 @@ main {
 .section {
   position: relative;
 }
-.section::before {
-  content: "";
-  position: absolute;
-  width: 99vw;
-  height: 10vh;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  z-index: 1;
-}
 .section::after {
   position: absolute;
   left: 50%;
@@ -97,7 +85,7 @@ main {
   transform: skewX(-10deg);
   border: none;
   transition: 0.3s;
-  box-shadow: 5px 5px 0 rgb(82, 93, 98);
+  box-shadow: 5px 5px 0 rgb(13, 13, 13);
 }
 @media (min-width: 320px) and (max-width: 640px) {
   .btn {
@@ -108,9 +96,16 @@ main {
 }
 .btn:hover {
   transition: 0.5s;
-  box-shadow: 10px 10px 0 rgb(82, 93, 98);
+  box-shadow: 10px 10px 0 rgb(13, 13, 13);
   color: rgb(85, 229, 72);
   cursor: pointer;
+}
+.btn:hover:disabled {
+  box-shadow: 5px 5px 0 rgb(13, 13, 13);
+  color: inherit;
+}
+.btn:disabled {
+  background-color: grey;
 }
 .btn:active {
   cursor: -webkit-grabbing;

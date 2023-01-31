@@ -1,7 +1,7 @@
 $bg-color: rgb(52, 60, 64);
 $basic-font-color: rgb(179, 192, 178);
 $highlight-font-color: rgb(85, 229, 72);
-$bg-shadow-color: rgb(82, 93, 98);
+$bg-shadow-color: rgb(13, 13, 13);
 $btn-bg-color: rgb(107, 124, 132);
 
 $phone-width: 320px;
@@ -75,20 +75,7 @@ main {
 .section {
     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 99vw;
-        height: 10vh;
-        top: 0;
-        left: 0;
-        background-color: transparent;
-        backdrop-filter: blur(3px);
-        z-index: 1;
-    }
-
     &::after {
-        // content: "Skills";
         position: absolute;
         left: 50%;
         z-index: 2;
@@ -132,13 +119,23 @@ main {
         width: 5rem;
     }
 
+    
     &:hover {
         transition: 0.5s;
         box-shadow: 10px 10px 0 $bg-shadow-color;
         color: $highlight-font-color;
         cursor: pointer;
-    }
 
+        &:disabled {
+            box-shadow: 5px 5px 0 $bg-shadow-color;
+            color: inherit;
+        }
+    }
+    
+    &:disabled {
+        background-color: grey;
+    }
+    
     &:active {
         cursor: grabbing;
     }

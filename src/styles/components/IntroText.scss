@@ -7,8 +7,9 @@ $basic-font-color: rgb(179, 192, 178);
 $highlight-font-color: rgb(85, 229, 72);
 $bg-color: rgb(52, 60, 64);
 
+$desk-font-size: 1.3rem;
 
-$h1-fontSize: 3rem;
+$h1-fontSize: 3.5rem;
 
 @mixin phones {
     @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
@@ -33,6 +34,7 @@ $h1-fontSize: 3rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1rem;
 
     @include phones {
         max-width: 20rem;
@@ -40,11 +42,11 @@ $h1-fontSize: 3rem;
     }
 
     @include tablets {
-        max-width: 15rem;
+        max-width: 25rem;
     }
 
     @include desktops {
-        max-width: 28rem;
+        max-width: 30rem;
     }
 
     h1 {
@@ -53,11 +55,11 @@ $h1-fontSize: 3rem;
         font-weight: 200;
     
         @include phones {
-            font-size: $h1-fontSize * 0.7;
+            font-size: $h1-fontSize * 0.6;
         }
     
         @include tablets {
-            font-size: $h1-fontSize * 0.85;
+            font-size: $h1-fontSize * 0.75;
         }
     
         span {
@@ -71,11 +73,15 @@ $h1-fontSize: 3rem;
         margin-top: 0.4rem;
         color: $basic-font-color;
         @include phones {
-            font-size: 0.8rem;
+            font-size: $desk-font-size * 0.6;
         }
 
         @include tablets {
-            font-size: 0.9rem;
+            font-size: $desk-font-size * 0.8;
+        }
+
+        @include desktops {
+            font-size: $desk-font-size;
         }
     }
     

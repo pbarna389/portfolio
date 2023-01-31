@@ -56,16 +56,21 @@ $desktop-width: 1280px;
             }
 
             @include tablets {
-                max-width: 15rem;
+                max-width: 25rem;
+                align-self: flex-start;
             }
 
             @include desktops {
                 max-width: 28rem;
+                align-self: flex-start;
             }
         }
     }
 
     .portrait-wrapper {
         position: relative;
+        @include tablets {
+            align-self: center;
+        }
     }
 }

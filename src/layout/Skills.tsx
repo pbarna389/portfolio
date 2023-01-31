@@ -8,7 +8,7 @@ const Skills = () => {
 
   return (
     <section className="section skills">
-      <Parallax url="https://wallpapertag.com/wallpaper/full/7/3/2/154689-cool-coding-background-1920x1280-for-tablet.jpg" />
+      <Parallax url="https://wallpapertag.com/wallpaper/full/7/3/2/154689-cool-coding-background-1920x1280-for-tablet.jpg" section_name="Skills"/>
       <div className="grid-wrapper">
         {
           skills &&

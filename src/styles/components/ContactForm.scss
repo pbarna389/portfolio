@@ -1,12 +1,12 @@
 $desk-width: 20rem;
 $desk-padding: 0.5rem;
-$bg-shadow-color: rgb(82, 93, 98);
+$bg-shadow-color: rgb(13, 13, 13);
 
-$desk-font-size: 1.5rem;
+$desk-font-size: 1.3rem;
 
 $phone-width: 320px;
 $phone-button: 362px;
-$tablet-width: 768px;
+$tablet-width: 640px;
 $tablet-contact-width-max: 1010px;
 $desktop-width: 1280px;
 
@@ -98,18 +98,7 @@ $desktop-width: 1280px;
             width: $desk-width + 2rem;
 
             @include phones {
-                width: $phone-width;
-            }
-
-            &:hover {
-                &:disabled {
-                    box-shadow: 5px 5px 0 $bg-shadow-color;
-                    color: inherit;
-                }
-            }
-
-            &:disabled {
-                background-color: grey;
+                width: $phone-width - 20px;
             }
         }
     }
@@ -126,5 +115,6 @@ $desktop-width: 1280px;
         @include tablets {
             font-size: $desk-font-size * 0.8;
         }
+
     };
 };

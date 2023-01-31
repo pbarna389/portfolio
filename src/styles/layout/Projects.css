@@ -1,24 +1,3 @@
 .projects {
   position: relative;
-}
-.projects::after {
-  content: "Projects";
-  position: absolute;
-  top: 7.5%;
-  transform: translate(-50%, -50%);
-}
-@media (min-width: 320px) and (max-width: 640px) {
-  .projects::after {
-    top: 7%;
-  }
-}
-@media (min-width: 640px) and (max-width: 1280px) {
-  .projects::after {
-    top: 5.78%;
-  }
-}
-@media (min-width: 1280px) {
-  .projects::after {
-    top: 6%;
-  }
 }/*# sourceMappingURL=Projects.css.map */

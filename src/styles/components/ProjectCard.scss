@@ -1,6 +1,6 @@
 $basic-font-color: rgb(179, 192, 178);
 $highlight-font-color: rgb(85, 229, 72);
-$bg-shadow-color: rgb(82, 93, 98);
+$bg-shadow-color: black;
 $bg-color: rgb(107, 124, 132);
 
 $phone-width: 320px;
@@ -45,7 +45,7 @@ $desktop-width: 1280px;
     &:hover {
         h4{
             color: $highlight-font-color;
-            text-shadow: 5px 5px 0 $bg-shadow-color;
+            // text-shadow: 5px 5px 0 $bg-shadow-color;
         }
     }
 
@@ -54,7 +54,7 @@ $desktop-width: 1280px;
         color: $basic-font-color;
         height: 2rem;
         margin-bottom: 1rem;
-        text-shadow: 3px 3px 0 $bg-shadow-color;
+        // text-shadow: 3px 3px 0 $bg-shadow-color;
         transition: all 0.3s linear;
     };
 }

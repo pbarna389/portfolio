@@ -1,14 +1,75 @@
 .parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 10vh;
   background-size: cover;
   background-attachment: fixed;
   margin: 10rem auto;
+  transition: filter 0.3s linear;
+  overflow: hidden;
+}
+.parallax:hover {
+  filter: none;
+}
+.parallax:hover .section-name {
+  color: rgb(85, 229, 72);
+}
+.parallax:hover::before, .parallax:hover::after {
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+.parallax .section-name {
+  z-index: 2;
+  color: lightgrey;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2rem;
+  text-indent: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: color 0.3s linear;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+  .parallax .section-name {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 640px) and (max-width: 1280px) {
+  .parallax .section-name {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .parallax .section-name {
+    font-size: 3rem;
+  }
+}
+.parallax::before, .parallax::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: all 0.3s linear;
+}
+.parallax::before {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.parallax::after {
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
 }
 .parallax .helper {
-  background-color: transparent;
+  background-color: none;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 .parallax .helper.arrow-top-left {
   top: 0;

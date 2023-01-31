@@ -6,7 +6,7 @@ import "../styles/layout/Contact.css"
 const Contact = () => {
     return (
         <section className="section contact">
-            <Parallax url="https://img.freepik.com/premium-photo/contact-us_36325-2135.jpg?w=1480"/>
+            <Parallax url="https://img.freepik.com/premium-photo/contact-us_36325-2135.jpg?w=1480" section_name="Contact"/>
             <ContactForm />
         </section>
     )

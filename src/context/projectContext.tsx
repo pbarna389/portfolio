@@ -30,13 +30,13 @@ export const ProjectProvider:React.FC<ProviderProps> = ({ children }) => {
           id: 0,
           name: "Todo-app",
           desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, quibusdam incidunt similique sint nihil, soluta delectus at iusto itaque maiores dolorum ipsum, debitis a quidem minima ut ea ab molestiae.",
-          finished: false,
+          finished: true,
       },
       {
           id: 1,
           name: "Weather-app",
           desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis, laboriosam impedit dicta maiores accusantium reprehenderit soluta commodi corporis nostrum expedita itaque recusandae in esse eveniet! Adipisci facere delectus cupiditate?",
-          finished: false,
+          finished: true,
       },
       {
           id: 2,
