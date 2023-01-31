@@ -33,11 +33,13 @@ $basic-tr-delay: 550ms;
                 translate: 0;
                 opacity: 1;
                 filter: none;
+                transition-delay: $basic-tr-delay;
             }
             .contact-text {
                 filter: none;
                 translate: 0;
                 opacity: 1;
+                transition-delay: $basic-tr-delay;
             }
         }
 

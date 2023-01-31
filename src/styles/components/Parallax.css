@@ -2,11 +2,13 @@
   translate: 0;
   opacity: 1;
   filter: none;
+  transition-delay: 550ms;
 }
 .skills.show .contact-wrapper .contact-text, .projects.show .contact-wrapper .contact-text, .contact.show .contact-wrapper .contact-text {
   filter: none;
   translate: 0;
   opacity: 1;
+  transition-delay: 550ms;
 }
 .skills.show .grid-wrapper .project-card, .projects.show .grid-wrapper .project-card, .contact.show .grid-wrapper .project-card {
   filter: none;
