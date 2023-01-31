@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react";
-import { ProjectContext, IProjectContext } from "../context/projectContext";
+import { ProjectContext } from "../context/projectContext";
+import { IProjectContext } from "../@types/custom";
 import "../styles/components/Modal.css";
 
 import inDev01 from "../assets/Images/In development/01.jpg";

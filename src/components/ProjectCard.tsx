@@ -1,12 +1,7 @@
 import { useContext } from "react";
-import { ProjectContext, IProjectContext } from "../context/projectContext";
-
+import { ProjectContext } from "../context/projectContext";
+import { IProjectContext, ProjectCardProps } from "../@types/custom";
 import "../styles/components/ProjectCard.css";
-
-interface ProjectCardProps {
-    name: string,
-    finished: boolean,
-}
 
 const ProjectCard:React.FC<ProjectCardProps> = ({ name, finished }) => {
     const {

@@ -1,6 +1,8 @@
 import { useState, useContext } from "react";
-import { ProjectContext, IProjectContext } from "../context/projectContext";
+import { ProjectContext } from "../context/projectContext";
+import { IOptions, IProjectContext } from "../@types/custom";
 import { useInterObserver } from "../hooks/useInterObserver";
+
 
 import Parallax from "../components/Parallax";
 import ProjectCard from "../components/ProjectCard";
@@ -15,7 +17,7 @@ const Projects:React.FC = () => {
         modalStates:[modalState, setModalState],
     } = useContext(ProjectContext) as IProjectContext;
 
-    const options = {
+    const options:IOptions = {
         threshold: 0.2
     }
 

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import "../styles/components/Orbit.css"
 
 const Orbit = () => {

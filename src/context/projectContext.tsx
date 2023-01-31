@@ -1,22 +1,5 @@
 import React, { useState, createContext } from 'react';
-
-export interface IProjectContext {
-  projects: IProjects[],
-  modalStates: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
-  projectSelector: [IProjects | null, React.Dispatch<React.SetStateAction<IProjects | null>>],
-  fadeoutState: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
-}
-
-interface ProviderProps {
-  children: React.ReactNode
-}
-
-interface IProjects {
-    readonly id: number,
-    name: string,
-    desc: string,
-    finished: boolean,
-};
+import { IProjectContext, ProviderProps, IProjects } from '../@types/custom';
 
 export const ProjectContext = createContext<IProjectContext | null>(null);
 

@@ -1,9 +1,5 @@
 import "../styles/components/IntroText.css";
-
-interface IntroTextProps {
-    header: string,
-    text: string,
-};
+import { IntroTextProps } from '../@types/custom'
 
 const IntroText:React.FC<IntroTextProps> = ({ header, text }) => {
 

@@ -7,9 +7,7 @@ import { ReactComponent as Ts} from "../assets/SVG/TS.svg";
 
 import "../styles/components/SkillCard.css"
 
-interface SkillCardProps {
-  skill: string;
-};
+import { SkillCardProps } from "../@types/custom";
 
 const SkillCard:React.FC<SkillCardProps> = ({ skill }) => {
 

@@ -1,15 +1,16 @@
 import { useState } from "react";
+import { IOptions } from "../@types/custom";
+import { useInterObserver } from "../hooks/useInterObserver";
+
 import Parallax from "../components/Parallax";
 import SkillCard from "../components/SkillCard";
-
-import { useInterObserver } from "../hooks/useInterObserver";
 
 import "../styles/layout/Skills.css";
 
 const Skills = () => {
     const skills = ["HTML5", "CSS3", "JS", "React", "SASS", "TS"];
     
-    const options = {
+    const options:IOptions = {
       threshold: 0.2
     }
 

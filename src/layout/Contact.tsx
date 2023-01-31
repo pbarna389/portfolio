@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useInterObserver } from "../hooks/useInterObserver";
+import { IOptions } from "../@types/custom";
 import Parallax from '../components/Parallax';
 import ContactForm from '../components/ContactForm';
 
 import "../styles/layout/Contact.css"
 
 const Contact = () => {
-    const options = {
+    const options:IOptions = {
         threshold: 0.2
     }
     const [visibility, setVisibility] = useState<boolean>(false);
