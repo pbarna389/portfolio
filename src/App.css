@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
 html {
   min-width: 320px;
 }
@@ -13,9 +19,8 @@ html {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
+a {
+  cursor: pointer;
 }
 
 .App {
@@ -46,6 +51,7 @@ main {
 
 .section {
   position: relative;
+  margin-bottom: 10rem;
 }
 .section::after {
   position: absolute;

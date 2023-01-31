@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { ProjectContext, IProjectContext } from "../context/projectContext";
+import { useInterObserver } from "../hooks/useInterObserver";
 
 import Parallax from "../components/Parallax";
 import ProjectCard from "../components/ProjectCard";
@@ -14,8 +15,11 @@ const Projects:React.FC = () => {
         modalStates:[modalState, setModalState],
     } = useContext(ProjectContext) as IProjectContext;
 
+    const [visibility, setVisibility] = useState<boolean>(false);
+    const [ elementRef ] = useInterObserver(visibility, setVisibility);
+
     return (
-        <section className="section projects">
+        <section ref={elementRef} id="Projects" className={`section projects ${visibility ? "show" : ""}`}>
             <Parallax url="https://res.cloudinary.com/practicaldev/image/fetch/s--iNayE4dm--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/ui5xn1qpp4sgee1mryey.jpeg" section_name="Projects" />
             <div className="grid-wrapper">
                 {

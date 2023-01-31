@@ -1,11 +1,16 @@
+import { useState } from "react";
+import { useInterObserver } from "../hooks/useInterObserver";
 import Parallax from '../components/Parallax';
 import ContactForm from '../components/ContactForm';
 
 import "../styles/layout/Contact.css"
 
 const Contact = () => {
+    const [visibility, setVisibility] = useState<boolean>(false);
+    const [ elementRef ] = useInterObserver(visibility, setVisibility);
+
     return (
-        <section className="section contact">
+        <section ref={elementRef} id="Contact" className={`section contact ${visibility ? "show" : ""}`}>
             <Parallax url="https://img.freepik.com/premium-photo/contact-us_36325-2135.jpg?w=1480" section_name="Contact"/>
             <ContactForm />
         </section>

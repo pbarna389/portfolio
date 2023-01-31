@@ -27,6 +27,12 @@ $desktop-width: 1280px;
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
 html {
     min-width: 320px;
 
@@ -41,10 +47,10 @@ body {
     }    
 }
 
-* {
-    margin: 0;
-    padding: 0;
+a {
+    cursor: pointer;
 }
+
 
 .App {
     position: relative;
@@ -74,6 +80,7 @@ main {
 
 .section {
     position: relative;
+    margin-bottom: 10rem;
 
     &::after {
         position: absolute;

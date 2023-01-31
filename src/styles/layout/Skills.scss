@@ -3,6 +3,7 @@ $phone-button: 362px;
 $tablet-width: 640px;
 $desktop-width: 1280px;
 $basic-font-color: rgb(179, 192, 178);
+$highlight-font-color: rgb(85, 229, 72);
 
 @mixin phones {
     @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width}) {
@@ -24,17 +25,5 @@ $basic-font-color: rgb(179, 192, 178);
 
 .skills {
     position: relative;
-
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     width: 99vw;
-    //     height: 10vh;
-    //     top: 0;
-    //     left: 0;
-    //     background-color: transparent;
-    //     backdrop-filter: blur(3px);
-    //     z-index: 1;
-    // }
 
 }

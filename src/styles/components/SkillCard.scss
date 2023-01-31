@@ -24,12 +24,10 @@ $desktop-width: 1280px;
 .skill {
     position: relative;
     margin: 0 auto;
-    transition: all 0.3s linear;
-
-
-    &:hover {
-        scale: 1.1;
-    }
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    translate: -400px;
+    filter: grayscale(100%) blur(5px);
 
     @include phones {
         width: 4rem;

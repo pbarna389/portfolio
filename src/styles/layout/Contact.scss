@@ -42,5 +42,10 @@ $desktop-width: 1280px;
 
 .contact {
     margin-bottom: 5rem;
+    opacity: 0;
+    
+    &.show {
+        opacity: 1;
+    }
 
 }

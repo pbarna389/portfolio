@@ -25,6 +25,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  translate: -800px;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 0.7s ease-in;
 }
 @media (min-width: 320px) and (max-width: 640px) {
   .contact-wrapper form {
@@ -37,6 +41,7 @@
   border: 1px solid black;
   border-radius: 10px;
   transition: all 0.3s linear;
+  font-size: 1.1rem;
 }
 .contact-wrapper form input:focus, .contact-wrapper form textarea:focus {
   border: 3px solid black;
@@ -67,15 +72,21 @@
 .contact-wrapper .contact-text {
   width: 20rem;
   font-size: 1.3rem;
+  translate: 300px;
+  filter: blur(10px);
+  opacity: 0;
+  transition: all 0.7s ease-in;
 }
 @media (min-width: 320px) and (max-width: 640px) {
   .contact-wrapper .contact-text {
     font-size: 0.78rem;
     width: 320px;
+    translate: 0;
   }
 }
 @media (min-width: 640px) and (max-width: 1280px) {
   .contact-wrapper .contact-text {
+    translate: 0px;
     font-size: 1.04rem;
   }
 }/*# sourceMappingURL=ContactForm.css.map */

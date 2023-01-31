@@ -13,7 +13,7 @@ const Parallax: React.FC<ParallaxProps> = ({ url, section_name="not added" }) =>
         <div className="helper arrow-top-right"></div>
         <div className="helper arrow-bottom-left"></div>
         <div className="helper arrow-bottom-right"></div>
-        <div className="section-name">{section_name}</div>
+        <div id={`#${section_name}`} className="section-name">{section_name}</div>
       </div>
     </>
   )
