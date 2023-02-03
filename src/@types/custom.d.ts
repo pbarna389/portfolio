@@ -18,6 +18,7 @@ interface IProjects {
     name: string,
     desc: string,
     finished: boolean,
+    pics: string[] | null;
 };
 
 interface IntroTextProps {

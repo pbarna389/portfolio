@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ProjectContext } from "../context/projectContext";
 import { IProjectContext } from "../@types/custom";
 import "../styles/components/Modal.css";
@@ -13,8 +13,8 @@ const Modal:React.FC = () => {
   const [fadeInTimeoutID, setFadeInTimeoutID] = useState<number | null>(null);
   const [fadeTimeoutID, setFadeTimeoutID] = useState<number | null>(null);
 
-  const [inDevPics, setInDevPics] = useState([inDev01, inDev02, inDev03]);
-  const [showPicture, setShowPicture] = useState<string>(inDevPics[0]);
+  const [projectPics, setProjectPics] = useState([inDev01, inDev02, inDev03]);
+  const [showPicture, setShowPicture] = useState<string>();
   const [arrowClick, setArrowClicked] = useState<"left" | "right" | null>(null);
   const [galleryFadeIn, setGalleryFadeIn] = useState<boolean | null>(null);
   const [galleryFadeOut, setGalleryFadeOut] = useState<boolean | null>(null);
@@ -30,6 +30,19 @@ const Modal:React.FC = () => {
   useEffect(() => {
     modalFadein();
   }, []);
+
+  useEffect(() => {
+    if (selectedProject?.pics === null) {
+      setShowPicture(projectPics[0])
+    };
+    if (selectedProject !== null && selectedProject?.pics !== null) {
+      setProjectPics(selectedProject.pics);
+    }
+  }, [])
+
+  useEffect(() => {
+    setShowPicture(projectPics[0])
+  }, [projectPics])
 
   useEffect(() => {
     if (arrowClick === "left") {
@@ -53,11 +66,11 @@ const Modal:React.FC = () => {
 
       if (arrow === "left") {
         console.log("rotation - prev");
-        rotatePics(inDevPics, -1)
+        rotatePics(projectPics, -1, setProjectPics)
         setGalleryFadeIn(true);
       } else {
         console.log("rotation - right");
-        rotatePics(inDevPics, 1);
+        rotatePics(projectPics, 1, setProjectPics);
         setGalleryFadeIn(true);
       }
 
@@ -125,11 +138,11 @@ const Modal:React.FC = () => {
     modalFadeout();
   };
 
-  const rotatePics = (arr:any, num:any) => {
+  const rotatePics = (arr:any, num:number, setState: React.Dispatch<React.SetStateAction<any>>) => {
     const newArr = [...arr];
     num -= newArr.length * Math.floor(num / newArr.length);
     newArr.push.apply(newArr, newArr.splice(0, num));
-    setInDevPics(newArr);
+    setState(newArr);
     setShowPicture(newArr[0])
   };
 
